@@ -1,0 +1,33 @@
+<p-panel header="Pipes Numéricos Básicos" class="p-1">
+  <p>Pipes incluidos en Angular- Usualmente en el Common Module</p>
+</p-panel>
+
+<div class="grid">
+  <div class="col-12 md:col-8 lg:col-4">
+    <p-card header="Ventas Netas" subheader="De Presente Año">
+      <!-- Formatea el número totalSells con mínimo 2 y máximo 2 decimales -->
+      {{ totalSells | number:'1.2-2' }}
+      <!-- Ejemplo: 123456.789 → 123,456.79 -->
+    </p-card>
+  </div>
+
+  <div class="col-12 md:col-8 lg:col-4">
+    <p-card header="Ventas Brutas" subheader="De Presente Año">
+      <!-- Formatea totalSells como moneda en pesos mexicanos (MX),
+          usando el símbolo estrecho ($) y mostrando exactamente 4 decimales -->
+      {{ totalSells | currency:'MX':'symbol-narrow':'1.4-4' }}
+      <!-- Ejemplo: 123456.789 → $123,456.7890 -->
+    </p-card>
+  </div>
+
+  <div class="col-12 md:col-8 lg:col-4">
+    <p-card header="Ganancia Porcentual" subheader="De Presente Año">
+      <!-- Convierte percent a porcentaje con 2 decimales -->
+      {{ percent | percent:'1.2-2' }}
+      <!-- Ejemplo: 0.1234 → 12.34% -->
+    </p-card>
+  </div>
+</div>
+
+
+
