@@ -7,6 +7,7 @@ import { ProductsRoutingModule } from './products-routing.module';
 import { PanelModule } from "primeng/panel";
 import { PrimeNgModule } from '../prime-ng/prime-ng.module';
 import { OrderComponent } from './pages/order/order.component';
+import { ToggleCasePipe } from './pipes/togle-case.pipe';
 
 
 
@@ -15,7 +16,9 @@ import { OrderComponent } from './pages/order/order.component';
     BasicsPageComponent,
     NumbersPagesComponent,
     UncommonPageComponent,
-    OrderComponent
+    OrderComponent,
+    //Pipes
+    ToggleCasePipe
   ],
   imports: [
     CommonModule,
